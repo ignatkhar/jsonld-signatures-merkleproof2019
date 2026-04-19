@@ -5,7 +5,7 @@ import { LDMerkleProof2019 } from '../../src';
 describe('Given the anchoring chain is Ethereum Sepolia', function () {
   describe('when the certificate is valid', function () {
     it('should verify successfully', async function () {
-      vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
+      vi.mock('@ignatkhar/explorer-lookup', async (importOriginal) => {
         const explorerLookup = await importOriginal();
         return {
           ...explorerLookup,

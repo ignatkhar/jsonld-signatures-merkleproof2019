@@ -3,8 +3,8 @@ import { publicKeyUInt8ArrayFromJwk, publicKeyUInt8ArrayFromMultibase } from '..
 import { computeBitcoinAddressFromPublicKey, computeEthereumAddressFromPublicKey } from '../utils/issuingAddress.js';
 import getText from '../helpers/getText.js';
 import VerifierError from '../models/VerifierError.js';
-import { SupportedChains } from '@adityaghag/explorer-lookup';
-import type { IBlockchainObject } from '@adityaghag/explorer-lookup';
+import { SupportedChains } from '@ignatkhar/explorer-lookup';
+import type { IBlockchainObject } from '@ignatkhar/explorer-lookup';
 import type { ISecp256k1PublicKeyJwk } from '../utils/keyUtils';
 
 export default async function deriveIssuingAddressFromPublicKey (verificationMethodPublicKey: IDidDocumentPublicKey, chain: IBlockchainObject): Promise<string> {

@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import { SupportedChains } from '@adityaghag/explorer-lookup'
+import { SupportedChains } from '@ignatkhar/explorer-lookup'
 import didDocument from '../fixtures/did:ion:EiA_Z6LQILbB2zj_eVrqfQ2xDm4HNqeJUw5Kj2Z7bFOOeQ.json';
 import { publicKeyUInt8ArrayFromJwk } from '../../src/utils/keyUtils';
 import {computeBitcoinAddressFromPublicKey, computeEthereumAddressFromPublicKey} from '../../src/utils/issuingAddress';

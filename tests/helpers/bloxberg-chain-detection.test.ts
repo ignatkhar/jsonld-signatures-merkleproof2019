@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import getChain from '../../src/helpers/getChain.js';
-import { BLOCKCHAINS } from '@adityaghag/explorer-lookup';
+import { BLOCKCHAINS } from '@ignatkhar/explorer-lookup';
 
 describe('Bloxberg Chain Detection Tests', function () {
   describe('getChain function', function () {

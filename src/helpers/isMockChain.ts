@@ -1,5 +1,5 @@
-import { BLOCKCHAINS } from '@adityaghag/explorer-lookup';
-import type { IBlockchainObject } from '@adityaghag/explorer-lookup';
+import { BLOCKCHAINS } from '@ignatkhar/explorer-lookup';
+import type { IBlockchainObject } from '@ignatkhar/explorer-lookup';
 
 export default function isMockChain (chain: IBlockchainObject | string): boolean {
   if (chain) {

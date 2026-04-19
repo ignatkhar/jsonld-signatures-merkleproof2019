@@ -6,7 +6,7 @@ import fixtureTransactionData from '../fixtures/transactionData';
 describe('when the process fails', function () {
   describe('given the local hash does not match the remote hash', function () {
     it('should return the error', async function () {
-      vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
+      vi.mock('@ignatkhar/explorer-lookup', async (importOriginal) => {
         const explorerLookup = await importOriginal();
         return {
           ...explorerLookup,

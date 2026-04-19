@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { type ExplorerAPI, type TransactionData } from '@adityaghag/explorer-lookup';
+import { type ExplorerAPI, type TransactionData } from '@ignatkhar/explorer-lookup';
 import ensureExplorerAPIValidity from '../../src/utils/ensureExplorerAPIValidity';
 
 describe('ensureExplorerAPIValidity test suite', function () {

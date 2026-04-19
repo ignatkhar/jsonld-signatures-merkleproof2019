@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach, afterEach, beforeAll, afterAll, vi } from 'vitest';
 import sinon from 'sinon';
-import type * as explorerLookup from '@adityaghag/explorer-lookup';
+import type * as explorerLookup from '@ignatkhar/explorer-lookup';
 import { LDMerkleProof2019, type MerkleProof2019Options, type MerkleProof2019VerificationResult } from '../src';
 import decodedProof, { assertionTransactionId } from './assertions/proof';
-import { BLOCKCHAINS } from '@adityaghag/explorer-lookup';
+import { BLOCKCHAINS } from '@ignatkhar/explorer-lookup';
 import blockcertsV3Fixture, { documentHash } from './fixtures/testnet-v3-did';
 import fixtureTransactionData from './fixtures/transactionData';
 
@@ -64,7 +64,7 @@ describe('MerkleProof2019 test suite', function () {
         let result: MerkleProof2019VerificationResult;
 
         beforeAll(async function () {
-          vi.mock('@adityaghag/explorer-lookup', async (importOriginal) => {
+          vi.mock('@ignatkhar/explorer-lookup', async (importOriginal) => {
             const explorerLookup = await importOriginal();
             return {
               ...explorerLookup,

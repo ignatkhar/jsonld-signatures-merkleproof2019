@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import isMockChain from '../../src/helpers/isMockChain';
-import { BLOCKCHAINS } from '@adityaghag/explorer-lookup';
+import { BLOCKCHAINS } from '@ignatkhar/explorer-lookup';
 
 describe('domain chains isMockChain use case test suite', function () {
   describe('given it is called with a chain parameter', function () {

@@ -1,9 +1,9 @@
-import { BLOCKCHAINS, type IBlockchainObject } from '@adityaghag/explorer-lookup';
+import { BLOCKCHAINS, type IBlockchainObject } from '@ignatkhar/explorer-lookup';
 import { capitalize } from '../utils/string.js';
 import { type DecodedProof } from '../models/Proof';
 
 // merkleRoot2019: see https://w3c-dvcg.github.io/lds-merkle-proof-2019/#blockchain-keymap
-function getMerkleRoot2019Chain (anchor: string): IBlockchainObject {
+function getMerkleRoot2019Chain(anchor: string): IBlockchainObject {
   const dataArray = anchor.split(':');
 
   let mainChain: string;
@@ -36,6 +36,8 @@ function getMerkleRoot2019Chain (anchor: string): IBlockchainObject {
       return getChainObject('arbitrumSepolia');
     } else if (network === 'one' || network === 'mainnet') {
       return getChainObject('arbitrumOne');
+    } else if (network === 'bloxberg') {
+      return getChainObject('arbbloxberg');
     }
   }
 
@@ -43,14 +45,14 @@ function getMerkleRoot2019Chain (anchor: string): IBlockchainObject {
   return getChainObject(chainCodeSignatureValue);
 }
 
-function getChainObject (chainCodeProofValue: string): IBlockchainObject {
+function getChainObject(chainCodeProofValue: string): IBlockchainObject {
   const chainObject: IBlockchainObject = Object.keys(BLOCKCHAINS)
     .map(key => BLOCKCHAINS[key])
     .find((entry: IBlockchainObject) => entry.signatureValue === chainCodeProofValue);
   return chainObject;
 }
 
-export default function getChain (proof: DecodedProof = null): IBlockchainObject {
+export default function getChain(proof: DecodedProof = null): IBlockchainObject {
   if (proof?.anchors) {
     const { anchors } = proof;
     const anchor = anchors[0];
