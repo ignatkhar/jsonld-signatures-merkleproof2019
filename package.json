@@ -8,7 +8,7 @@
   },
   "typings": "lib/index.d.ts",
   "dependencies": {
-    "@ignatkhar/explorer-lookup": "file:../explorer-lookup",
+    "@bloxberg-org/explorer-lookup": "1.2.1",
     "@blockcerts/schemas": "^3.9.2",
     "@digitalbazaar/ecdsa-multikey": "github:blockchain-certificates/ecdsa-multikey#feat/secp256k1",
     "@ethersproject/keccak256": "^5.8.0",
