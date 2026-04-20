@@ -1,5 +1,5 @@
 {
-  "name": "@ignatkhar/jsonld-signatures-merkleproof2019",
+  "name": "@bloxberg-org/jsonld-signatures-merkleproof2019",
   "version": "1.3.0",
   "description": "A jsonld signature implementation to support MerkleProof2019 verification in Verifiable Credential context",
   "exports": {
@@ -52,11 +52,12 @@
     "test:watch": "vitest",
     "test:bloxberg": "vitest run --testNamePattern=Bloxberg",
     "semantic-release": "semantic-release",
-    "prepare": "husky install"
+    "prepublishOnly": "npm run compile",
+    "prepare": "node -e \"if (!process.env.CI) require('child_process').execSync('husky install', { stdio: 'inherit' })\""
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ignatkhar/jsonld-signatures-merkleproof2019.git"
+    "url": "git+https://github.com/bloxberg-org/jsonld-signatures-merkleproof2019.git"
   },
   "keywords": [
     "verifiable",
@@ -70,9 +71,9 @@
   "author": "ignatkhar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ignatkhar/jsonld-signatures-merkleproof2019/issues"
+    "url": "https://github.com/bloxberg-org/jsonld-signatures-merkleproof2019/issues"
   },
-  "homepage": "https://github.com/ignatkhar/jsonld-signatures-merkleproof2019#readme",
+  "homepage": "https://github.com/bloxberg-org/jsonld-signatures-merkleproof2019#readme",
   "publishConfig": {
     "access": "public"
   }
