@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, vi } from 'vitest';
 import { LDMerkleProof2019 } from '../../src/index.js';
-import type * as explorerLookup from '@ignatkhar/explorer-lookup';
-import { BLOCKCHAINS } from '@ignatkhar/explorer-lookup';
+import type * as explorerLookup from '@bloxberg-org/explorer-lookup';
+import { BLOCKCHAINS } from '@bloxberg-org/explorer-lookup';
 
 // Bloxberg certificate test fixture
 const bloxbergCertificate = {
@@ -111,7 +111,7 @@ describe('Bloxberg Certificate Verification Test Suite', function () {
     let verifier: LDMerkleProof2019;
 
     beforeAll(function () {
-      vi.mock('@ignatkhar/explorer-lookup', async (importOriginal) => {
+      vi.mock('@bloxberg-org/explorer-lookup', async (importOriginal) => {
         const explorerLookup = await importOriginal();
         return {
           ...explorerLookup,

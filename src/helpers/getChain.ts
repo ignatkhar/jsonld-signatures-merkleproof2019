@@ -1,4 +1,4 @@
-import { BLOCKCHAINS, type IBlockchainObject } from '@ignatkhar/explorer-lookup';
+import { BLOCKCHAINS, type IBlockchainObject } from '@bloxberg-org/explorer-lookup';
 import { capitalize } from '../utils/string.js';
 import { type DecodedProof } from '../models/Proof';
 

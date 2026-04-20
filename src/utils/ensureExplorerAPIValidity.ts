@@ -1,4 +1,4 @@
-import { type ExplorerAPI } from '@ignatkhar/explorer-lookup';
+import { type ExplorerAPI } from '@bloxberg-org/explorer-lookup';
 
 function isPriorityValid (explorerAPI: ExplorerAPI): boolean {
   return explorerAPI.priority >= 0;

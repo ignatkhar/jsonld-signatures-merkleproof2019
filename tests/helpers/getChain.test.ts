@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { BLOCKCHAINS } from '@ignatkhar/explorer-lookup';
+import { BLOCKCHAINS } from '@bloxberg-org/explorer-lookup';
 import getChain from '../../src/helpers/getChain';
 import { type DecodedProof } from '../../src/models/Proof';
 
